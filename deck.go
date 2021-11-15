@@ -62,7 +62,7 @@ func newDeckFromFile(filename string) deck {
 }
 
 func (d deck) shuffle() {
-	// create a new seed value to make the deck return value to be truly random (by default this seed value will be always the same which makes not so random)
+	// create a new seed value to make the deck's return value to be truly random (by default this seed value will be always the same which makes the deck not so random)
 	source := rand.NewSource(time.Now().UnixNano())
 	r := rand.New(source)
 
